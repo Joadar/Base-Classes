@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+
+    defaultConfig {
+        applicationId "io.smallant.baseclasses.sample"
+
+        minSdkVersion 16
+        targetSdkVersion 26
+
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+            versionNameSuffix "-debug"
+
+            multiDexEnabled true
+            minifyEnabled false
+            zipAlignEnabled true
+            debuggable true
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude module: 'jsr305'
+    })
+    testCompile 'junit:junit:4.12'
+
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    compile project(":library")
+}

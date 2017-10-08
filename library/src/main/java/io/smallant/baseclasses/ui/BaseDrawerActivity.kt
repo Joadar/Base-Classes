@@ -8,7 +8,7 @@ import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.ActionBarDrawerToggle
 import android.view.MenuItem
 import android.view.View
-import com.example.baseclasses.R
+import io.smallant.baseclasses.R
 
 /**
  * Created by jpannetier on 11/08/2017.

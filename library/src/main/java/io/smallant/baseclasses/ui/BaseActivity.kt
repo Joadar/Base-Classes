@@ -6,7 +6,7 @@ import android.support.v4.app.DialogFragment
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import com.example.baseclasses.R
+import io.smallant.baseclasses.R
 import io.smallant.baseclasses.extensions.replaceFragmentSafely
 import io.smallant.baseclasses.ui.interfaces.OnClickListener
 

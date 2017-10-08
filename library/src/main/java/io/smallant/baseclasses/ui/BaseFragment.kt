@@ -5,7 +5,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.baseclasses.R
+import io.smallant.baseclasses.R
 import io.smallant.baseclasses.ui.interfaces.OnClickListener
 
 /**
