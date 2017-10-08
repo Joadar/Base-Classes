@@ -14,7 +14,8 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group='com.github.joadar'
+group = 'com.github.joadar'
+version = '0.1.'
 
 android {
     compileSdkVersion 26
