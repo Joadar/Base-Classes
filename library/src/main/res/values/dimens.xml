@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="keyline_1">10dp</dimen>
+    <dimen name="keyline_2">16dp</dimen>
+    <dimen name="keyline_3">24dp</dimen>
+</resources>

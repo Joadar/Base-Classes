@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
 
@@ -50,7 +51,13 @@ dependencies {
     })
     testCompile 'junit:junit:4.12'
 
+    compile project(":library")
+
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
-    compile project(":library")
+    // Dependency Injection
+    compile "com.google.dagger:dagger:2.11"
+    kapt "com.google.dagger:dagger-compiler:2.11"
+    annotationProcessor "com.google.dagger:dagger-compiler:2.11"
+    compile "com.google.dagger:dagger-android-support:2.11"
 }

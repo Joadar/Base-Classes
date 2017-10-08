@@ -6,8 +6,9 @@
         android:allowBackup="true"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:name=".SampleApplication"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".features.home.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

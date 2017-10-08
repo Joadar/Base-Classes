@@ -19,7 +19,7 @@ abstract class BaseRecyclerAdapter<T, VH : BaseViewHolder<T>>(val context: Conte
     override fun getItemCount() = items.size
 
     fun setItems(data: List<T>) {
-        items.clear()
+        clearItems()
         addItems(data)
     }
 
