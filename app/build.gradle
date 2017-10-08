@@ -1,18 +1,20 @@
 buildscript {
     repositories {
         jcenter()
+        mavenCentral()
         maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.1.51"
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
     }
 }
 
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'com.github.dcendents.android-maven'
 
 group = 'com.github.joadar'
 version = '0.1'
