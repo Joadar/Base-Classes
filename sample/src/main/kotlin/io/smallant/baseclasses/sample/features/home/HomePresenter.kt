@@ -1,7 +1,7 @@
 package io.smallant.baseclasses.sample.features.home
 
 import io.reactivex.Observable
-import io.smallant.baseclasses.ui.BasePresenter
+import io.smallant.baseclasses.ui.mvp.BasePresenter
 import javax.inject.Inject
 
 /**

@@ -1,9 +1,10 @@
-package io.smallant.baseclasses.ui
+package io.smallant.baseclasses.ui.mvp
 
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
+import io.smallant.baseclasses.ui.BaseContract
 import timber.log.Timber
 
 /**
