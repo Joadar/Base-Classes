@@ -8,8 +8,8 @@ import io.smallant.baseclasses.R
  * Created by Jonathan on 10/10/2017.
  */
 object ShareUtils {
-    val intent = Intent()
-    lateinit var context: Context
+    private val intent = Intent()
+    private lateinit var context: Context
 
     fun share(context: Context, value: String) {
         this.context = context
