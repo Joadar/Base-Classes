@@ -15,7 +15,7 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 group = 'com.github.joadar'
-version = '0.1.3'
+version = '0.1.4'
 
 android {
     compileSdkVersion 27
