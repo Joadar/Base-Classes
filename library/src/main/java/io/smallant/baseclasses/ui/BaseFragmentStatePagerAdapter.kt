@@ -26,13 +26,11 @@ class BaseFragmentStatePagerAdapter<F : BaseFragment>(manager: FragmentManager) 
 
     override fun getCount() = fragments.size
 
-    override fun getItemPosition(obj: Any?): Int {
-        if (clearInProgress) {
-            return PagerAdapter.POSITION_NONE
-        } else if (fragments.contains(obj)) {
-            return fragments.indexOf(obj)
-        } else {
-            return PagerAdapter.POSITION_NONE
+    override fun getItemPosition(obj: Any): Int {
+        return when {
+            clearInProgress -> PagerAdapter.POSITION_NONE
+            fragments.contains(obj) -> fragments.indexOf(obj)
+            else -> PagerAdapter.POSITION_NONE
         }
     }
 
@@ -54,7 +52,7 @@ class BaseFragmentStatePagerAdapter<F : BaseFragment>(manager: FragmentManager) 
     fun clear() {
         clearInProgress = true
         for (i in fragments.size - 1 downTo 0) {
-            destroyItem(null, i, fragments[i])
+            //destroyItem(null, i, fragments[i])
             fragments.removeAt(i)
         }
         fragmentTitles.clear()

@@ -14,15 +14,16 @@ class HomeFragment : BaseFragmentRecycler<HomePresenter, StringsRecyclerAdapter,
 
     override var layoutId: Int = R.layout.fragment_home
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         presenter.view = this
 
-        adapter = StringsRecyclerAdapter(context, arrayListOf())
+        adapter = StringsRecyclerAdapter(context!!, arrayListOf())
         super.onViewCreated(view, savedInstanceState)
     }
 
     override fun onItemClicked(position: Int) {
-        ShareUtils.share(context, "${items[position]} clicked!")
-        //context.toast("${items[position]} clicked!")
+        context?.let {
+            ShareUtils.share(it, "${items[position]} clicked!")
+        }
     }
 }

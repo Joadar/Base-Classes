@@ -19,7 +19,7 @@ abstract class BaseFragmentRecycler<P : BaseContract.Presenter, A : BaseRecycler
     protected var items = listOf<T>()
     protected lateinit var adapter: A
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         initAdapter()

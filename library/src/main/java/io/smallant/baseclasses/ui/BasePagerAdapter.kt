@@ -21,22 +21,22 @@ abstract class BasePagerAdapter<T>(val context: Context) : PagerAdapter(), View.
     abstract fun inflateView(container: ViewGroup?, position: Int): View
     abstract fun bindView(view: View, item: T)
 
-    override fun isViewFromObject(view: View?, obj: Any?) = view == obj
+    override fun isViewFromObject(view: View, obj: Any) = view == obj
     override fun getCount() = items.size
 
-    override fun instantiateItem(container: ViewGroup?, position: Int): Any {
+    override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val view = inflateView(container, position)
         view.setOnClickListener(this)
         view.tag = position
         bindView(view, items[position])
-        container?.addView(view)
+        container.addView(view)
         return view
     }
 
-    override fun destroyItem(container: ViewGroup?, position: Int, view: Any?) {
+    override fun destroyItem(container: ViewGroup, position: Int, view: Any) {
         if (view is View) {
             view.setOnClickListener(null)
-            container?.removeView(view)
+            container.removeView(view)
         }
     }
 

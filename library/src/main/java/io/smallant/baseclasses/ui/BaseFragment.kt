@@ -15,13 +15,13 @@ abstract class BaseFragment : Fragment(), OnClickListener {
 
     abstract var layoutId: Int
 
-    protected val isTablet: Boolean by lazy { context.resources.getInteger(R.integer.isTablet) == 1 }
-    protected val isLandscape: Boolean by lazy { context.resources.getInteger(R.integer.isLandscape) == 1 }
+    protected val isTablet: Boolean by lazy { context?.resources?.getInteger(R.integer.isTablet) == 1 }
+    protected val isLandscape: Boolean by lazy { context?.resources?.getInteger(R.integer.isLandscape) == 1 }
     protected val nbColumn: Int by lazy { resources.getInteger(R.integer.number_column) }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         if (layoutId != 0) {
-            return inflater?.inflate(layoutId, container, false)
+            return inflater.inflate(layoutId, container, false)
         }
         return super.onCreateView(inflater, container, savedInstanceState)
     }
