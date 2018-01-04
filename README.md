@@ -3,7 +3,7 @@ A simple Android library to help with basics *generics classes* I mostly used in
 
 ## Implementation
 
-Current version: `0.1.3`
+Current version: `0.1.7`
 
 Add it in your root build.gradle at the end of repositories:
 
